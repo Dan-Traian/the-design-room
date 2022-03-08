@@ -1,5 +1,5 @@
 {
-  "name": "eve",
+  "name": "the-design-room",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,14 +9,8 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "axios": "^0.19.0",
     "core-js": "^2.6.5",
-    "gsap": "^3.2.6",
-    "jsonwebtoken": "^8.5.1",
-    "rivescript": "^2.1.0",
     "vue": "^2.6.10",
-    "vue-kinesis": "^1.1.5",
-    "vue-observe-visibility": "^0.4.6",
     "vue-router": "^3.0.7"
   },
   "devDependencies": {

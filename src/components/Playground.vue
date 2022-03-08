@@ -1,9 +1,5 @@
 <template>
-  <div class="w-screen flex ">
-    <div class=" h-screen w-auto bg-dark flex items-center overflow-x-scroll">
-      <div class="boxxy"></div>
-    </div>
-  </div>
+  <div class="w-screen flex"></div>
 </template>
 
 <script>
