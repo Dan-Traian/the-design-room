@@ -1,0 +1,235 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,800;0,900;1,500&display=swap');
+
+@import "fonts/space-grotesk";
+@import "fonts/miso";
+
+
+$min_width: 320px;
+$max_width: 1200px;
+$min_font: 16px;
+$max_font: 24px;
+
+.miso {
+  font-family: "Miso", sans-serif !important;
+  *{
+    font-family: "Miso", sans-serif !important;
+  }
+}
+.grotesk{
+  font-family: "Space Grotesk", Helvetica, serif !important;
+  color: #410807;
+  *{
+    font-family: "Space Grotesk", Helvetica, serif !important;
+  }
+}
+.montserrat{
+  font-family: "Montserrat", sans-serif, serif !important;
+  *{
+    font-family: "Montserrat", sans-serif, serif !important;
+  }
+}
+
+body,
+* {
+  font-style: normal;
+  font-variant-ligatures: normal;
+  font-variant-caps: normal;
+  font-variant-numeric: normal;
+  font-variant-east-asian: normal;
+  font-weight: normal;
+  font-stretch: normal;
+}
+
+// types
+.text-1 {
+  text-align: start;
+  line-height: 186px;
+  letter-spacing: normal;
+  font-weight: 400;
+  font-size: 155px;
+  @include fluid-type(400px, 1440px, 60px, 155px);
+}
+
+.text-intro{
+  display: inline-block;
+  vertical-align: top;
+  font-size: 30px;
+  line-height: 1.5;
+  @include fluid-type(400px, 1200px, 30px, 70px);
+
+  @media only screen and (min-width: 1200px) {
+    @include fluid-type(1200px,1680px, 70px, 90px);
+    line-height: 1.2;
+    letter-spacing: 2px;
+  }
+  @media only screen and (min-width: 1680px) {
+    font-size: 110px;
+    line-height: 1.2;
+    letter-spacing: 2px;
+  }
+}
+$percent : 0.8;
+.text-medium{
+
+
+  display: inline-block;
+  vertical-align: top;
+  font-size: 24px;
+  line-height: 1.5;
+  @include fluid-type(400px, 1200px, 24px, 75px);
+  @media only screen and (min-width: 1200px) {
+    @include fluid-type(1200px,1680px, 75px, 90px);
+    line-height: 1.2;
+    letter-spacing: 2px;
+  }
+  @media only screen and (min-width: 1680px) {
+    font-size: 100px;
+    line-height: 1.2;
+    letter-spacing: 2px;
+  }
+}
+
+
+
+
+.text-email{
+
+  display: inline-block;
+  vertical-align: top;
+  @include fluid-type(400px, 1440px, 40px, 130px);
+  @media only screen and (min-width: 1440px) {
+    @include fluid-type(1440px,1680px, 90px, 155px);
+    line-height: 1.2;
+    letter-spacing: 2px;
+  }
+}
+
+
+.light {
+  font-weight: 300;
+}
+
+.medium {
+  font-weight: 400;
+}
+.bold {
+  font-weight: bold;
+}
+
+
+
+
+.outlined-text{
+  color: #0000;
+  display: inline-block;
+  position: relative;
+  &:before{
+    color: #0000;
+    transition: color .4s ease;
+    content: attr(data-text);
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+  }
+  &:after{
+    color: #4108071a;
+    -webkit-text-fill-color: #0000;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #410807;
+    content: attr(data-text);
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    box-sizing: inherit;
+  }
+  &:hover{
+    &:before{
+      color: #410807;
+
+    }
+    &:after{
+
+    }
+  }
+}
+
+.number-text {
+  font-size: calc(45vw / 4);
+  line-height: 90%;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  direction: rtl;
+}
+
+.text-large{
+  font-size: calc(45vw / 5);
+  line-height: 90%;
+}
+
+.image-animate {
+  position: relative;
+  opacity: 0;
+  top: 10px;
+  transition: all 0.5s ease-in-out;
+  transition-delay: 0.2s;
+  &.active {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+.text-animate{
+  display: flex;
+  flex-wrap: wrap;
+  div{
+    display: block;
+    &.small{
+      margin-right: 5px;
+      @media only screen and (min-width: 1200px) {
+        margin-right: 10px;
+      }
+    }
+    &.small-miso{
+      margin-right: 3px;
+      @media only screen and (min-width: 1200px) {
+        margin-right: 7px;
+      }
+      font-weight: bold;
+      color: inherit;
+    }
+    &.medium{
+      margin-right: 10px;
+      @media only screen and (min-width: 1200px) {
+        margin-right: 35px;
+      }
+    }
+    &.large{
+      margin-right: 10px;
+      @media only screen and (min-width: 1200px) {
+        margin-right: 35px;
+      }
+    }
+    overflow: hidden;
+    span{
+      display: block;
+     animation-delay: 1s;
+      transform-origin: top left;
+      transform : rotate(5deg) translate(0%, 100%);
+      &.active{
+        animation: slidein 1s ease-in-out forwards;
+      }
+    }
+  }
+}
+@keyframes slidein {
+  from{
+    transform : rotate(5deg) translate(0%, 100%);
+  }
+  to{
+    transform : rotate(0deg) translate(0%,0%);
+  }
+}

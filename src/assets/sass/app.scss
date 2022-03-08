@@ -1,0 +1,43 @@
+@tailwind base;
+
+@import "parts/variables/_colors";
+
+@import "parts/abstract/general";
+@import "parts/abstract/layout";
+@import "parts/abstract/transitions";
+@import "parts/abstract/mixins";
+
+@import "parts/_typography";
+@import "parts/scene";
+@import "parts/dixa";
+
+.link {
+  text-decoration: none;
+  color: inherit;
+  cursor: none;
+  &:hover {
+    cursor: none;
+  }
+  &.standard-link {
+    text-decoration: none;
+    color: $blue-ribbon;
+    position: relative;
+    display: inline-block;
+  }
+}
+
+#sideInfo {
+  position: fixed;
+  top: 2vw;
+  left: 2vw;
+  height: 90vh;
+  z-index: 1000;
+  max-width: 8rem;
+
+  .text {
+    transform-origin: center;
+    transform: rotate(-90deg);
+  }
+}
+
+@tailwind utilities;
