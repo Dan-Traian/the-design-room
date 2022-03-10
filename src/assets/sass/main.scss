@@ -1,9 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
+
 
 * {
   box-sizing: border-box;
-  font-family: "Lato", sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
 }
+:root {
+  --primary: #2B77FF;
+  --light: #848484;
+  --dark: #272727;
+  --white: #fff;
+}
+
 
 #app {
   width: 100vw;
@@ -12,6 +20,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  color:var(--dark)
 }
 .title {
   font-size: 4rem;
@@ -20,4 +29,5 @@
 .text {
   font-size: 1rem;
   font-weight: 400;
+  margin: 0;
 }
