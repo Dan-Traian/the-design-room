@@ -1,23 +1,17 @@
 {
   "name": "the-design-room",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
+  "version": "0.0.0",
   "scripts": {
-    "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html --no-minify"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Dan-Traian/the-design-room.git"
+  "dependencies": {
+    "vue": "^3.2.25"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Dan-Traian/the-design-room/issues"
-  },
-  "homepage": "https://github.com/Dan-Traian/the-design-room#readme",
   "devDependencies": {
-    "sass": "^1.49.9"
+    "@vitejs/plugin-vue": "^2.2.0",
+    "vite": "^2.8.0"
   }
 }
